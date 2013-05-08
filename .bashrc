@@ -65,10 +65,8 @@ function parse_git_branch {
 }
 
 
-
-
 function git_status {
-	local BRANCH="branch"
+	local BRANCH=
 	local _M=0
 	local _D=0
 	local UNTRACKED=0
@@ -104,7 +102,7 @@ function git_status {
 				;;
 		esac
 
-	done < <(git status --porcelain -b)
+	done < <(git status --porcelain -b 2> /dev/null)
 
 
 
@@ -125,21 +123,25 @@ function git_status {
 	local   LIGHT_RED="\[\033[1;31m\]"
 	local     DEFAULT="\[\033[0m\]"
 
-	local GITINFO="$CYAN$BRANCH"
+	if [[ -z $BRANCH ]]; then
+		echo ""
+	else
+		local GITINFO="$CYAN$BRANCH"
 
-	if [ $A -gt 0 -o $B -gt 0 -o $C -gt 0 ]; then
-		GITINFO="$GITINFO $LIGHT_GREEN+$A ~$B -$C";
-		if [ $E -gt 0 -o $F -gt 0 -o $G -gt 0 ]; then
-			GITINFO="$GITINFO $DEFAULT|";
+		if [ $A -gt 0 -o $B -gt 0 -o $C -gt 0 ]; then
+			GITINFO="$GITINFO $LIGHT_GREEN+$A ~$B -$C";
+			if [ $E -gt 0 -o $F -gt 0 -o $G -gt 0 ]; then
+				GITINFO="$GITINFO $DEFAULT|";
+			fi
 		fi
-	fi
-	if [ $E -gt 0 -o $F -gt 0 -o $G -gt 0 ]; then
-		GITINFO="$GITINFO $LIGHT_RED+$E ~$F -$G";
-	fi
+		if [ $E -gt 0 -o $F -gt 0 -o $G -gt 0 ]; then
+			GITINFO="$GITINFO $LIGHT_RED+$E ~$F -$G";
+		fi
 
-	echo "[$GITINFO${DEFAULT}]"
-
+		echo "[$GITINFO${DEFAULT}]"
+	fi
 }
+
 
 
 
