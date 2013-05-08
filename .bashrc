@@ -119,6 +119,8 @@ function git_status {
 
 
 	local CYAN="\[\033[0;36m\]"
+	local       GREEN="\[\033[0;32m\]"
+
 	local LIGHT_GREEN="\[\033[1;32m\]"
 	local   LIGHT_RED="\[\033[1;31m\]"
 	local     DEFAULT="\[\033[0m\]"
@@ -126,7 +128,7 @@ function git_status {
 	if [[ -z $BRANCH ]]; then
 		echo ""
 	else
-		local GITINFO="$CYAN$BRANCH"
+		local GITINFO="$GREEN$BRANCH"
 
 		if [ $A -gt 0 -o $B -gt 0 -o $C -gt 0 ]; then
 			GITINFO="$GITINFO $LIGHT_GREEN+$A ~$B -$C";
