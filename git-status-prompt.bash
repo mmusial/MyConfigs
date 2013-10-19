@@ -103,7 +103,7 @@ function git_status_prompt {
 #if [ "$color_prompt" = yes ]; then
 	GIT_STATUS=$(git_status)
 #	PS1=$GIT_STATUS
-    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $GIT_STATUS\n\$ "
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[0;37m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\] $GIT_STATUS\n\$ "
 #else
 #    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w$BLUE\$(parse_git_branch)$DEFAULT\n\$ "
 #fi
