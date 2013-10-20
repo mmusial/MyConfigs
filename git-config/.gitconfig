@@ -1,0 +1,22 @@
+[user]
+	name = Marcin Musial
+	email = marcin.musial@gmail.com
+[alias]
+	lol = log --oneline --graph --decorate
+	co = commit
+	ca = commit -a
+	s = status
+	az = archive --format zip -o
+	top = log --oneline --graph --decorate -10
+	ch = checkout
+	st = status -sb
+	ffmerge = merge --ff-only
+	d = difftool
+	cm = commit -am
+[push]
+	default = simple
+[core]
+	editor = gvim
+
+[color]
+	ui = true
