@@ -18,3 +18,5 @@ source $SCRIPTPATH/../git-status-prompt.bash
 # git completion
 # source ~/Projects/git/contrib/completion/git-completion.bash
 
+
+alias textmate="open -n /Applications/TextMate.app/ --args "
