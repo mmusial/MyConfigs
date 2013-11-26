@@ -22,3 +22,6 @@ set noexpandtab
 set nowrap
 set linebreak
 
+if has('gui_running')
+  set guifont=Ubuntu\ Mono:h12
+endif
