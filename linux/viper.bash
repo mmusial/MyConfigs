@@ -4,3 +4,5 @@ SCRIPTPATH="`dirname "${SCRIPT}"`"
 
 source $SCRIPTPATH/../git-status-prompt.bash
 
+alias ls='ls --color'
+
