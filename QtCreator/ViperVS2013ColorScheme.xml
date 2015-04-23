@@ -15,15 +15,15 @@
   <style name="Number" foreground="#b5cea8" background="#1e1e1e"/>
   <style name="String" foreground="#d69d85" background="#1e1e1e"/>
   <style name="Type" foreground="#4ec9b0"/>
-  <style name="Local" foreground="#adccf1" background="#1e1e1e"/>
-  <style name="Field" foreground="#aaaa7f"/>
+  <style name="Local" foreground="#c8c8c8" background="#1e1e1e"/>
+  <style name="Field" foreground="#dadada"/>
   <style name="Static" foreground="#b8d7a3" background="#1e1e1e"/>
-  <style name="VirtualMethod" foreground="#c8c8c8" background="#1e1e1e" italic="true"/>
+  <style name="VirtualMethod" foreground="#c8c8c8" background="#1e1e1e" bold="true"/>
   <style name="Function" foreground="#c8c8c8" background="#1e1e1e"/>
   <style name="Keyword" foreground="#569cd6" background="#1e1e1e"/>
   <style name="PrimitiveType" foreground="#569cd6"/>
   <style name="Operator" foreground="#d5d5ab" background="#1e1e1e"/>
-  <style name="Preprocessor" foreground="#d6c685"/>
+  <style name="Preprocessor" foreground="#bd63c5"/>
   <style name="Label" foreground="#c8c8c8" background="#1e1e1e"/>
   <style name="Comment" foreground="#608b4e" background="#1e1e1e" italic="true"/>
   <style name="Doxygen.Comment" foreground="#73a65d" italic="true"/>
@@ -40,7 +40,7 @@
   <style name="JsGlobalVar" foreground="#0055af" italic="true"/>
   <style name="QmlStateName" foreground="#c7c7c7" italic="true"/>
   <style name="Binding" foreground="#800000"/>
-  <style name="DisabledCode" foreground="#777777" background="#4a4a4a"/>
+  <style name="DisabledCode" foreground="#777777" background="#1e1e1e"/>
   <style name="AddedLine" foreground="#55ffff"/>
   <style name="RemovedLine" foreground="#ff5555"/>
   <style name="DiffFile" foreground="#55ff55"/>
