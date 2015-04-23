@@ -16,7 +16,7 @@ set backspace=2
 
 set vb t_vb=			" visualbell
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 " disaple arrow key
 " no <left>	<Nop>
